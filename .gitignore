@@ -1,0 +1,25 @@
+# Build, all can be recreated by
+# npm run build, therefore don't store
+build/*.js
+build/*.woff*
+build/*.ttf
+build/*.eot
+build/*.svg
+
+# Logs
+logs
+*.log
+
+# Coverage directory used by tools like istanbul
+coverage
+
+# Compiled binary addons (http://nodejs.org/api/addons.html)
+build/Release
+
+# Dependency directory
+node_modules
+
+# Users Environment Variables
+.lock-wscript
+
+.DS_Store
