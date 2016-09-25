@@ -1,3 +1,5 @@
+# MedicalProfile-UI
+
 ## Medical Profile UI front rewritten in React.js using ES6 & Webpack
 
 ## Installation
