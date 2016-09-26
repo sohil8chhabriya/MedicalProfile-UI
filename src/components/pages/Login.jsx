@@ -65,9 +65,16 @@ var LoginPage = React.createClass({
   },
 
   handleLogin: function(e){
+    var url = `http://172.22.240.24:8080/MedicalProfileV2/rest/user/auth/${this.state.loginID}/${this.state.password}/`;
+    fetch(url)
+    .then(response => response.json())
+    .then(result=> {
+        console.log(result);
+        //console.log(eval(JSON.parse(result)));
+    });
     this.transitionTo('dashboard');
     return false;
-  }
+  },
 
 });
 
