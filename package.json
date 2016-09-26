@@ -11,7 +11,7 @@
     "test-cross-browser": "./node_modules/karma/bin/karma start karma.cross-browser.config.js",
     "coveralls": "cat coverage/lcov.info | coveralls",
     "clean": "rm -f build/*.{js,ttf,eot,woff,woff2,svg}",
-    "clean-node":"npm uninstall autoprefixer axios babel-core babel-loader base-64 bootstrap bootstrap-social bundle-loader classnames coveralls css-loader express extract-text-webpack-plugin file-loader flux font-awesome  istanbul istanbul-instrumenter-loader  jquery karma karma-coverage karma-mocha karma-phantomjs-launcher karma-sauce-launcher karma-sinon-chai karma-webpack lazy less less-loader mocha node-sass  normalizr  nprogress phantomjs postcss-loader postcss-nested react react-bootstrap react-hot-loader react-modal react-router reflux resource-api-utils style-loader url-loader webpack webpack-dev-server"
+    "clean-node": "npm uninstall autoprefixer axios babel-core babel-loader base-64 bootstrap bootstrap-social bundle-loader classnames coveralls css-loader express extract-text-webpack-plugin file-loader flux font-awesome  istanbul istanbul-instrumenter-loader  jquery karma karma-coverage karma-mocha karma-phantomjs-launcher karma-sauce-launcher karma-sinon-chai karma-webpack lazy less less-loader mocha node-sass  normalizr  nprogress phantomjs postcss-loader postcss-nested react react-bootstrap react-hot-loader react-modal react-router reflux resource-api-utils style-loader url-loader webpack webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -24,7 +24,7 @@
     "quickstart"
   ],
   "author": "Sohil Chhabriya",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "coveralls": "^2.11.2",
     "istanbul": "^0.3.7",
