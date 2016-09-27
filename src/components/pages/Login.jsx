@@ -32,6 +32,7 @@ var LoginPage = React.createClass({
 
               <div className="form-group">
                 <Input onChange={this.setPassword} className="form-control" placeholder="Password" ref="password" type="password" name="password" />
+                <div id="error" className="error hide">Error: Wrong password / userId</div>
               </div>
               <Input type="checkbox" label="Remember Me" />
               <Button type="submit" bsSize="large" bsStyle="success" block>Login</Button>
@@ -47,7 +48,6 @@ var LoginPage = React.createClass({
   },
 
   setLoginID: function(e) {
-
     this.setState({
       loginID: e.target.value,
       loginError: ''
@@ -56,7 +56,6 @@ var LoginPage = React.createClass({
   },
 
   setPassword: function(e) {
-
     this.setState({
       password: e.target.value,
       loginError: ''
@@ -65,14 +64,23 @@ var LoginPage = React.createClass({
   },
 
   handleLogin: function(e){
-    var url = `http://172.22.240.24:8080/MedicalProfileV2/rest/user/auth/${this.state.loginID}/${this.state.password}/`;
+    var url = `http://localhost:8080/MedicalProfileV2/rest/user/auth/${this.state.loginID}/${this.state.password}/`;
     fetch(url)
     .then(response => response.json())
     .then(result=> {
-        console.log(result);
-        //console.log(eval(JSON.parse(result)));
+        var authResult = eval(JSON.parse(result.auth))
+        console.log(`Auth: ${authResult}`);
+        if(authResult){
+            console.log('Auth: Redirecting to dashboard');
+            document.getElementById('error').classList.add('hide')
+            this.transitionTo('dashboard');
+        }
+        else {
+            console.log('Auth: Login Error');
+            document.getElementById('error').classList.remove('hide')
+            this.transitionTo('login');
+        }
     });
-    this.transitionTo('dashboard');
     return false;
   },
 
