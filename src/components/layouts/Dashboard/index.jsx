@@ -48,8 +48,7 @@ var HomePage = React.createClass({
         <div id="wrapper" className="content">
 
           <Navbar brand={<span><img src={require('../../../common/img/logo.png')} alt="Start React" title="Start React" />
-            <span>&nbsp;SB Admin React - </span>
-            <a href="http://startreact.com/" title="Start React" rel="home">StartReact.com</a>
+            <span>&nbsp;Medical Profile</span>
             <button type="button" className="navbar-toggle" onClick={this.toggleMenu} style={{position: 'absolute', right: 0, top: 0}}>
               <span className="sr-only">Toggle navigation</span>
               <span className="icon-bar"></span>
@@ -191,7 +190,9 @@ var HomePage = React.createClass({
                   <li>
                     <Link to="dashboard.home"><i className="fa fa-dashboard fa-fw"></i> &nbsp;Dashboard</Link>
                   </li>
-                        
+                  <li>
+                    <Link to="dashboard.userprofile"><i className="fa fa-user fa-fw"></i> &nbsp;User Profile</Link>
+                  </li>
                   <li className={classNames({'active': !this.state.chartsElementsCollapsed})}>
                     <a href="javascript:void(0)" onClick={ () => { this.setState({chartsElementsCollapsed: !this.state.chartsElementsCollapsed}); return false; } }>
                       <i className="fa fa-bar-chart-o fa-fw"></i> &nbsp;Charts<span className="fa arrow"></span>

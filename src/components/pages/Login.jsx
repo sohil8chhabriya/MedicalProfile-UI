@@ -64,6 +64,7 @@ var LoginPage = React.createClass({
   },
 
   handleLogin: function(e){
+    // todo: do validations
     var url = `http://localhost:8080/MedicalProfileV2/rest/user/auth/${this.state.loginID}/${this.state.password}/`;
     fetch(url)
     .then(response => response.json())
@@ -72,12 +73,12 @@ var LoginPage = React.createClass({
         console.log(`Auth: ${authResult}`);
         if(authResult){
             console.log('Auth: Redirecting to dashboard');
-            document.getElementById('error').classList.add('hide')
+            document.getElementById('error').classList.add('hide');
             this.transitionTo('dashboard');
         }
         else {
             console.log('Auth: Login Error');
-            document.getElementById('error').classList.remove('hide')
+            document.getElementById('error').classList.remove('hide');
             this.transitionTo('login');
         }
     });
