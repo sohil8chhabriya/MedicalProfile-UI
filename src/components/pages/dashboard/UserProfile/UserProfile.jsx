@@ -3,7 +3,7 @@ import {NavDropdown, MenuItem, DropdownButton, Navbar, Nav, NavItem, Panel, Page
 
 import StatWidget from "../../../common/StatWidget.js";
 
-var Home = React.createClass({
+var UserProfile = React.createClass({
 
   render: function() {
     var userName = this.props.userName ? this.props.userName : "Sohil Chhabriya";
@@ -167,4 +167,4 @@ var Home = React.createClass({
 
 });
 
-export default Home;
+export default UserProfile;

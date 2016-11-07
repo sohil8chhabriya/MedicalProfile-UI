@@ -151,7 +151,9 @@ var HomePage = React.createClass({
 
                 <NavDropdown title=<i className="fa fa-user fa-fw"></i> >
                   <MenuItem eventKey="1">
-                    <i className="fa fa-user fa-fw"></i> User Profile
+                    <Link to="dashboard.userprofile">
+                        <i className="fa fa-user fa-fw"></i> User Profile
+                    </Link>
                   </MenuItem> 
                   <MenuItem eventKey="2">
                     <i className="fa fa-gear fa-fw"></i> Settings
@@ -192,6 +194,9 @@ var HomePage = React.createClass({
                   </li>
                   <li>
                     <Link to="dashboard.userprofile"><i className="fa fa-user fa-fw"></i> &nbsp;User Profile</Link>
+                  </li>
+                  <li>
+                    <Link to="dashboard.appointment"><i className="fa fa-user fa-fw"></i> &nbsp;Patient Appointment</Link>
                   </li>
                   <li className={classNames({'active': !this.state.chartsElementsCollapsed})}>
                     <a href="javascript:void(0)" onClick={ () => { this.setState({chartsElementsCollapsed: !this.state.chartsElementsCollapsed}); return false; } }>

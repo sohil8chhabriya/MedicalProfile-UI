@@ -5,7 +5,6 @@ import BaseLayout from "../components/layouts/Base";
 import DashboardLayout from "../components/layouts/Dashboard";
 
 import DashboardHomePage from "../components/pages/dashboard/Home";
-import DashboardUserProfile from "../components/pages/dashboard/UserProfile";
 import DashboardTablesPage from "../components/pages/dashboard/Tables";
 import DashboardFormsPage from "../components/pages/dashboard/Forms";
 import DashboardPanelsWellsPage from "../components/pages/dashboard/PanelsWells";
@@ -20,6 +19,9 @@ import DashboardMorrisjsChartsPage from "../components/pages/dashboard/MorrisjsC
 import LoginPage from "../components/pages/Login";
 import LogoutPage from "../components/pages/Logout";
 
+import DashboardUserProfile from "../components/pages/dashboard/UserProfile";
+import DashboardPatientAppointment from "../components/pages/dashboard/PatientAppointment";
+
 var Routes = React.createClass({
 
   statics: {
@@ -28,7 +30,10 @@ var Routes = React.createClass({
           <Route name="base" path="/" handler={BaseLayout}>
             <Route name="dashboard" path="/dashboard" handler={DashboardLayout}>
               <Route name="dashboard.home" path="/home" handler={DashboardHomePage} />
+
               <Route name="dashboard.userprofile" path="/userprofile" handler={DashboardUserProfile} />
+              <Route name="dashboard.appointment" path="/appointment" handler={DashboardPatientAppointment} />
+              
               <Route name="dashboard.flot-charts" path="/flot-charts" handler={DashboardFlotChartsPage} />
               <Route name="dashboard.morrisjs-charts" path="/morrisjs-charts" handler={DashboardMorrisjsChartsPage} />
               <Route name="dashboard.tables" path="/tables" handler={DashboardTablesPage} />
