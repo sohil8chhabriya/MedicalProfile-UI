@@ -6,6 +6,7 @@ import StatWidget from "../../../common/StatWidget.js";
 var UserProfile = React.createClass({
 
   render: function() {
+    console.log(this.props.params.userid);
     var userName = this.props.userName ? this.props.userName : "Sohil Chhabriya";
     var userType = this.props.userType ? this.props.userType : "Patient"
     return (

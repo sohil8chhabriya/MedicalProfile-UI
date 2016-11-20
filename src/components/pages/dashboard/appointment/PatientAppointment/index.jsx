@@ -1,5 +1,5 @@
 import React from 'react';
-import AsyncElement from '../../../common/AsyncElement';
+import AsyncElement from '../../../../common/AsyncElement';
 
 var PrePatientAppointment = React.createClass({
 

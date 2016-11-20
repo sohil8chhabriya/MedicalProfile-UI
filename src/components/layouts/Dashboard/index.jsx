@@ -47,7 +47,7 @@ var HomePage = React.createClass({
     return (
         <div id="wrapper" className="content">
 
-          <Navbar brand={<span><img src={require('../../../common/img/logo.png')} alt="Start React" title="Start React" />
+          <Navbar brand={<span><img src={require('../../../common/img/purple-heart.jpg')} alt="Start React" title="Start React" />
             <span>&nbsp;Medical Profile</span>
             <button type="button" className="navbar-toggle" onClick={this.toggleMenu} style={{position: 'absolute', right: 0, top: 0}}>
               <span className="sr-only">Toggle navigation</span>
@@ -151,7 +151,7 @@ var HomePage = React.createClass({
 
                 <NavDropdown title=<i className="fa fa-user fa-fw"></i> >
                   <MenuItem eventKey="1">
-                    <Link to="dashboard.userprofile">
+                    <Link to="dashboard.userprofile" params={{ userid: "1" }}>
                         <i className="fa fa-user fa-fw"></i> User Profile
                     </Link>
                   </MenuItem> 
@@ -193,7 +193,7 @@ var HomePage = React.createClass({
                     <Link to="dashboard.home"><i className="fa fa-dashboard fa-fw"></i> &nbsp;Dashboard</Link>
                   </li>
                   <li>
-                    <Link to="dashboard.userprofile"><i className="fa fa-user fa-fw"></i> &nbsp;User Profile</Link>
+                    <Link to="dashboard.userprofile" params={{ userid: "1" }}><i className="fa fa-user fa-fw"></i> &nbsp;User Profile</Link>
                   </li>
                   <li>
                     <Link to="dashboard.appointment"><i className="fa fa-user fa-fw"></i> &nbsp;Patient Appointment</Link>

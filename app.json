@@ -1,13 +1,16 @@
 {
-  "name": "Essential React",
-  "description": "A minimal skeleton for building testable React apps using ES6",
+  "name": "Medical Profile Analytics",
+  "description": "Hospital Patient Appointment Profile",
   "keywords": [
-    "react",
-    "es6",
-    "starter"
+    "patient",
+    "profile",
+    "PatientProfile",
+    "Doctor",
+    "Hospital",
+    "Appointment"
   ],
-  "repository": "https://github.com/pheuter/essential-react",
-  "logo": "https://dl.dropboxusercontent.com/u/1803181/essential-react-logo.png",
+  "repository": "https://github.com/sohil8chhabriya/MedicalProfile-UI",
+  "logo": "http://ww1.prweb.com/prfiles/2013/04/08/10612323/Logo-Heart.jpg",
   "env": {
     "PRODUCTION": "true"
   }

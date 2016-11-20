@@ -1,5 +1,5 @@
 import React from "react";
-import { Router, Route, DefaultRoute, RouteHandler, Redirect } from "react-router";
+import { Router, Route, DefaultRoute, RouteHandler, Redirect} from "react-router";
 
 import BaseLayout from "../components/layouts/Base";
 import DashboardLayout from "../components/layouts/Dashboard";
@@ -20,7 +20,8 @@ import LoginPage from "../components/pages/Login";
 import LogoutPage from "../components/pages/Logout";
 
 import DashboardUserProfile from "../components/pages/dashboard/UserProfile";
-import DashboardPatientAppointment from "../components/pages/dashboard/PatientAppointment";
+import DashboardPatientAppointment from "../components/pages/dashboard/appointment/PatientAppointment";
+import DashboardAppointmentReport from "../components/pages/dashboard/appointment/AppointmentReport";
 
 var Routes = React.createClass({
 
@@ -28,11 +29,13 @@ var Routes = React.createClass({
     getRoutes: function() {
       return (
           <Route name="base" path="/" handler={BaseLayout}>
+
             <Route name="dashboard" path="/dashboard" handler={DashboardLayout}>
               <Route name="dashboard.home" path="/home" handler={DashboardHomePage} />
 
-              <Route name="dashboard.userprofile" path="/userprofile" handler={DashboardUserProfile} />
+              <Route name="dashboard.userprofile" path="/userprofile/?:userid?" handler={DashboardUserProfile} />
               <Route name="dashboard.appointment" path="/appointment" handler={DashboardPatientAppointment} />
+              <Route name="dashboard.appointment-report" path="/appointment/report" handler={DashboardAppointmentReport} />
               
               <Route name="dashboard.flot-charts" path="/flot-charts" handler={DashboardFlotChartsPage} />
               <Route name="dashboard.morrisjs-charts" path="/morrisjs-charts" handler={DashboardMorrisjsChartsPage} />
@@ -47,6 +50,7 @@ var Routes = React.createClass({
               <Route name="dashboard.blank" path="/blank" handler={DashboardBlankPage} />
               <DefaultRoute name="dashboard.default" handler={DashboardHomePage} />
             </Route>
+            
             <Route name="login" path="/login" handler={LoginPage} />
             <Route name="logout" path="/logout" handler={LogoutPage} />
             <DefaultRoute name="default" handler={DashboardLayout} />
@@ -56,7 +60,7 @@ var Routes = React.createClass({
     }
   },
   render: function() {
-  
+
   }
   
 });

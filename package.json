@@ -7,6 +7,7 @@
     "postinstall": "npm run build",
     "server": "node server.js",
     "build": "webpack -p --config webpack.production.config.js",
+    "build-dev": "webpack -p --config webpack.local.config.js",
     "test": "PHANTOMJS_BIN=./node_modules/.bin/phantomjs ./node_modules/karma/bin/karma start karma.config.js",
     "test-cross-browser": "./node_modules/karma/bin/karma start karma.cross-browser.config.js",
     "coveralls": "cat coverage/lcov.info | coveralls",
@@ -15,13 +16,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/pheuter/essential-react.git"
+    "url": "https://github.com/sohil8chhabriya/MedicalProfile-UI"
   },
   "keywords": [
-    "skeleton",
-    "template",
-    "react",
-    "quickstart"
+    "Medical",
+    "Profile",
+    "Doctor",
+    "Patient",
+    "Appointment",
+    "Hospital"
   ],
   "author": "Sohil Chhabriya",
   "license": "MIT",

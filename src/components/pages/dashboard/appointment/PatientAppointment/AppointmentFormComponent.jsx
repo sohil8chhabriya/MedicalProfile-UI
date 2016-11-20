@@ -1,13 +1,11 @@
-import React, { PropTypes, Component } from 'react';
-import {Panel, Button, Input, Label, FormControls, Row, Col, PageHeader} from 'react-bootstrap';
+import React, { Component } from 'react';
+import { Panel, Button, Input, Label, FormControls, Row, Col, PageHeader } from 'react-bootstrap';
 
-var PatientAppointment = React.createClass({
+export default class AppointmentFormComponent extends Component {
 
-  render: function() {
-    
+	render() {
     return (
-
-      <div>
+  		<div>
         <div className="row">
           <div className="col-lg-12">
             <PageHeader>Appointment</PageHeader>
@@ -81,10 +79,6 @@ var PatientAppointment = React.createClass({
           </div>
         </div>
       </div>
-      
-    );
-  }
-
-});
-
-export default PatientAppointment;
+    ); //ending return
+  } //ending render
+} //ending class
