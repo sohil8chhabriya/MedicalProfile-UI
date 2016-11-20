@@ -110,5 +110,14 @@ module.exports = function(config) {
       'karma-sinon-chai',
       'karma-phantomjs-launcher'
     ],
+    externals: {
+      fs: '{}'
+    },
+    node: {
+      console: true,
+      fs: 'empty',
+      net: 'empty',
+      tls: 'empty'
+    }
   });
 }

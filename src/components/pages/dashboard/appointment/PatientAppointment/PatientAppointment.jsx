@@ -11,5 +11,5 @@ var PatientAppointment = React.createClass({
   }
 
 });
-
+window.React = React
 export default PatientAppointment;

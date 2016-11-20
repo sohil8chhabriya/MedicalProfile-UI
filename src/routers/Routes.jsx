@@ -20,6 +20,7 @@ import LoginPage from "../components/pages/Login";
 import LogoutPage from "../components/pages/Logout";
 
 import DashboardUserProfile from "../components/pages/dashboard/UserProfile";
+import DashboardAppointments from "../components/pages/dashboard/appointment/Appointments"
 import DashboardPatientAppointment from "../components/pages/dashboard/appointment/PatientAppointment";
 import DashboardAppointmentReport from "../components/pages/dashboard/appointment/AppointmentReport";
 
@@ -34,8 +35,9 @@ var Routes = React.createClass({
               <Route name="dashboard.home" path="/home" handler={DashboardHomePage} />
 
               <Route name="dashboard.userprofile" path="/userprofile/?:userid?" handler={DashboardUserProfile} />
-              <Route name="dashboard.appointment" path="/appointment" handler={DashboardPatientAppointment} />
+              <Route name="dashboard.patient-appointment" path="/patient-appointment" handler={DashboardPatientAppointment} />
               <Route name="dashboard.appointment-report" path="/appointment/report" handler={DashboardAppointmentReport} />
+              <Route name="dashboard.appointments" path="/appointments/" handler={DashboardAppointments} />
               
               <Route name="dashboard.flot-charts" path="/flot-charts" handler={DashboardFlotChartsPage} />
               <Route name="dashboard.morrisjs-charts" path="/morrisjs-charts" handler={DashboardMorrisjsChartsPage} />

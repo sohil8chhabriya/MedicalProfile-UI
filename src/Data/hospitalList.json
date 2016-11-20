@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "name": "hospital name 1",
+    "streetAddress": "hospital streetAddress 1",
+    "totalBeds": 100,
+    "branchOf": 1,
+    "emailId": "hospital1@emailid.com",
+    "phoneNo": 1234567890,
+    "date_of_establishment": "10/10/10",
+    "date_created": "11/11/11"
+  },
+    {
+    "id": 2,
+    "name": "hospital name 2",
+    "streetAddress": "hospital streetAddress 2",
+    "totalBeds": 100,
+    "branchOf": 2,
+    "emailId": "hospital2@emailid.com",
+    "phoneNo": 1234567890,
+    "date_of_establishment": "10/10/10",
+    "date_created": "11/11/11"
+  },
+    {
+    "id": 3,
+    "name": "hospital name 3",
+    "streetAddress": "hospital streetAddress 3",
+    "totalBeds": 100,
+    "branchOf": 3,
+    "emailId": "hospital3@emailid.com",
+    "phoneNo": 1234567890,
+    "date_of_establishment": "10/10/10",
+    "date_created": "11/11/11"
+  },
+    {
+    "id": 4,
+    "name": "hospital name 4",
+    "streetAddress": "hospital streetAddress 4",
+    "totalBeds": 100,
+    "branchOf": 4,
+    "emailId": "hospital4@emailid.com",
+    "phoneNo": 1234567890,
+    "date_of_establishment": "10/10/10",
+    "date_created": "11/11/11"
+  },
+    {
+    "id": 5,
+    "name": "hospital name 5",
+    "streetAddress": "hospital streetAddress 5",
+    "totalBeds": 100,
+    "branchOf": 5,
+    "emailId": "hospital5@emailid.com",
+    "phoneNo": 1234567890,
+    "date_of_establishment": "10/10/10",
+    "date_created": "11/11/11"
+  }
+]

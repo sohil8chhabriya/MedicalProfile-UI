@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "DiseaseName": "disease1"
+  },
+  {
+    "id": 2,
+    "DiseaseName": "disease2"
+  },
+  {
+    "id": 3,
+    "DiseaseName": "disease3"
+  },
+  {
+    "id": 4,
+    "DiseaseName": "disease4"
+  },
+  {
+    "id": 5,
+    "DiseaseName": "disease5"
+  },
+  {
+    "id": 6,
+    "DiseaseName": "disease6"
+  },
+]

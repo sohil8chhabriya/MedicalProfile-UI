@@ -46,7 +46,6 @@ var HomePage = React.createClass({
 
     return (
         <div id="wrapper" className="content">
-
           <Navbar brand={<span><img src={require('../../../common/img/purple-heart.jpg')} alt="Start React" title="Start React" />
             <span>&nbsp;Medical Profile</span>
             <button type="button" className="navbar-toggle" onClick={this.toggleMenu} style={{position: 'absolute', right: 0, top: 0}}>
@@ -196,7 +195,13 @@ var HomePage = React.createClass({
                     <Link to="dashboard.userprofile" params={{ userid: "1" }}><i className="fa fa-user fa-fw"></i> &nbsp;User Profile</Link>
                   </li>
                   <li>
-                    <Link to="dashboard.appointment"><i className="fa fa-user fa-fw"></i> &nbsp;Patient Appointment</Link>
+                    <Link to="dashboard.appointments"><i className="fa fa-user fa-fw"></i> &nbsp;Appointments</Link>
+                  </li>
+                  <li>
+                    <Link to="dashboard.patient-appointment"><i className="fa fa-user fa-fw"></i> &nbsp;Patient Appointment</Link>
+                  </li>
+                  <li>
+                    <Link to="dashboard.appointment-report"><i className="fa fa-user fa-fw"></i> &nbsp;Appointment Report</Link>
                   </li>
                   <li className={classNames({'active': !this.state.chartsElementsCollapsed})}>
                     <a href="javascript:void(0)" onClick={ () => { this.setState({chartsElementsCollapsed: !this.state.chartsElementsCollapsed}); return false; } }>
