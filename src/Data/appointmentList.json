@@ -50,9 +50,9 @@
   },
     {
     "id": 7,
-    "patientId": 1,
-    "docId": 1,
-    "hospitalId": 1,
+    "patientId": 7,
+    "docId": 7,
+    "hospitalId": 7,
     "time": "14:00",
     "date": "11 january 2016"
   }

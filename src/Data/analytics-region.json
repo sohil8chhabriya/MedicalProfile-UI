@@ -1,0 +1,20 @@
+[
+  {
+    "region": "region1",
+	"total": 10,
+    "totaladmitted": 7,
+    "totaldied": 3
+  },
+  {
+    "region": "region2",
+    "total": 10,
+    "totaladmitted": 7,
+    "totaldied": 3
+  },
+	{
+    "region": "region3",
+    "total": 14,
+    "totaladmitted": 6,
+    "totaldied": 3
+  }
+]

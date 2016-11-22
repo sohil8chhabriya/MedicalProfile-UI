@@ -29,6 +29,50 @@ class AppointmentStore extends EventEmitter {
     return require('../Data/userDiagonisisReport.json');
   }
 
+  getCount(region, disease, id) {
+	  var diseasesCount = require('../Data/analytics-disease.json');
+	  var regionsCount = require('../Data/analytics-region.json');
+	  var _region = this.fetchRegionCount(region, regionsCount, id);
+	  var _disease = this.fetchDiseaseCount(disease, diseasesCount, id);
+	  return _region + _disease;
+  }
+  
+  fetchRegionCount(region, data, id){
+	  var count = 0;
+	  Object.entries(data).map((datum) => {
+        if (datum[1].region === region) {
+		  if(id === "dtr") {
+			  count = datum[1].total;
+		  }
+		  if(id === "adtr") {
+			  count = datum[1].totaladmitted;
+		  }
+		  if(id === "ddtr") {
+			  count = datum[1].totaldied;
+		  }
+		}
+	  });
+	  return count;
+  }
+  
+    fetchDiseaseCount(disease, data, id){
+	  var count = 0;
+	  Object.entries(data).map((datum) => {
+        if (datum[1].disease === disease) {
+		  if(id === "dtr") {
+			  count = datum[1].total;
+		  }
+		  if(id === "adtr") {
+			  count = datum[1].totaladmitted;
+		  }
+		  if(id === "ddtr") {
+			  count = datum[1].totaldied;
+		  }
+		}
+	  });
+	  return count;
+  }
+  
   fetchAppointmentListofUser(id) {
     var appointmentSummary = [];
     Object.entries(this.getAppointmentList()).map((summary) => {

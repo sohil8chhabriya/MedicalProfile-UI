@@ -1,0 +1,20 @@
+[
+  {
+    "disease": "disease1",
+    "total": 10,
+    "totaladmitted": 5,
+    "totaldied": 5
+  },
+  {
+    "disease": "disease2",
+    "total": 10,
+    "totaladmitted": 7,
+    "totaldied": 3
+  },
+	{
+    "disease": "disease3",
+	"total": 10,
+    "totaladmitted": 7,
+    "totaldied": 3
+  }
+]

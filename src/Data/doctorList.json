@@ -1,0 +1,27 @@
+[
+  {
+    "docId": 10,
+	"userId":10,
+    "speciality": "speciality 1"
+  },
+	{
+    "docId": 2,
+	"userId":2,
+    "speciality": "speciality 2"
+  },
+  	{
+    "docId": 30,
+	"userId":3,
+    "speciality": "speciality 3"
+  },
+	{
+    "docId": 40,
+	"userId":40,
+    "speciality": "speciality 4"
+  },
+  	{
+    "docId": 50,
+	"userId":50,
+    "speciality": "speciality 5"
+  }
+]
