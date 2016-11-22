@@ -1,167 +1,87 @@
 import React, { PropTypes, Component } from 'react';
+import { Link } from "react-router";
+import UserStore from '../../../../Store/UserStore';
+import AppointmentStore from '../../../../Store/AppointmentStore';
+import AppointmentListItem from '../appointment/Appointments/AppointmentListItem'
+//import { getUserDetails } from '../../../../../Action/UserAction';
 import {NavDropdown, MenuItem, DropdownButton, Navbar, Nav, NavItem, Panel, PageHeader, ListGroup, ListGroupItem, Button} from "react-bootstrap";
 
-import StatWidget from "../../../common/StatWidget.js";
-
 var UserProfile = React.createClass({
+  getInitialState() {
+    return {
+      userDetails: UserStore.getUserDetails(this.props.params.userid?this.props.params.userid:"1"),
+      appointmentHistory: AppointmentStore.fetchAppointmentListofUser(this.props.params.userid?this.props.params.userid:"1")
+    };
+  },
 
   render: function() {
-    console.log(this.props.params.userid);
-    var userName = this.props.userName ? this.props.userName : "Sohil Chhabriya";
-    var userType = this.props.userType ? this.props.userType : "Patient"
+    const { userDetails, appointmentHistory } = this.state;
+    const AppointmentComponents = Object.entries(appointmentHistory).map((appointment) => {
+        return <AppointmentListItem {...appointment[1]} />;
+    });
+    console.log(userDetails);
+
     return (
       <div>
-
         <div className="row">
           <div className="col-lg-12">
-            <PageHeader>Welcome {userName} <h4 className="text-primary">{userType}</h4></PageHeader>
+            <PageHeader>Welcome {userDetails.name} <h4 className="text-primary">{userDetails.userType}</h4></PageHeader>
           </div>
         </div>
-
         <div className="row">
-          <div className="col-lg-3 col-md-6">
-            <StatWidget style="primary"
-                    icon="fa fa-comments fa-5x"
-                    count="26"
-                    headerText="New Comments!" 
-                    footerText="View Details"
-                    linkTo="/" />
-          </div>
-          <div className="col-lg-3 col-md-6">
-            <StatWidget style = "panel-green"
-                    icon = "fa fa-tasks fa-5x"
-                    count = "12"
-                    headerText="New Tasks!" 
-                    footerText="View Details"
-                    linkTo="/" />
-          </div>
-          <div className="col-lg-3 col-md-6">
-            <StatWidget style="panel-yellow"
-                    icon="fa fa-shopping-cart fa-5x"
-                    count="124"
-                    headerText="New Orders!" 
-                    footerText="View Details"
-                    linkTo="/" />
-          </div>
-          <div className="col-lg-3 col-md-6">
-            <StatWidget style="panel-red"
-                    icon="fa fa-support fa-5x"
-                    count="13"
-                    headerText="Support Tickets!" 
-                    footerText="View Details"
-                    linkTo="/" />                            
+          <div className="col-lg-12">
+            <div className="panel panel-default">
+              <div className="panel-heading">
+                <span>Profile Details</span>&nbsp;
+                <button className="btn btn-primary">Edit details</button>
+              </div>
+              <div className="panel-body">
+                <div className="col-md-6">
+                  <ul className="list-inline">
+                    <li className="col-md-6"><b>Name:</b> {userDetails.name}</li>
+                    <li className="col-md-6"><b>User Id:</b> {userDetails.id}</li>
+                    <li className="col-md-6"><b>Email Id:</b> {userDetails.emailId}</li>
+                    <li className="col-md-6"><b>Phone No:</b> {userDetails.phoneNo}</li>
+                    <li className="col-md-6"><b>Address:</b> {userDetails.streetAddress}</li>
+                    <li className="col-md-6"><b>City:</b> {userDetails.city}</li>
+                    <li className="col-md-6"><b>Country:</b> {userDetails.country}</li>
+                    <li className="col-md-6"><b>Pincode:</b> {userDetails.pincode}</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-
         <div className="row">
-          <div className="col-lg-8">
-
-            <Panel header={<span>
-              <i className="fa fa-bar-chart-o fa-fw"></i> Area Chart Example
-                  <div className="pull-right">
-                      <DropdownButton title="Dropdown" bsSize="xs" pullRight>
-                        <MenuItem eventKey="1">Action</MenuItem>
-                        <MenuItem eventKey="2">Another action</MenuItem>
-                        <MenuItem eventKey="3">Something else here</MenuItem>
-                        <MenuItem divider />
-                        <MenuItem eventKey="4">Separated link</MenuItem>
-                      </DropdownButton>
-                  </div>
-              </span>}
-            >
-              <div>
-                Panel contents
+          <div className="col-lg-12">
+            <div className="panel panel-default">
+              <div className="panel-heading">
+                <span>Appointments History</span>&nbsp;
+                <Link to="dashboard.userprofile">
+                  <button className="btn btn-primary">New Appointment</button>
+                </Link>
               </div>
-
-            </Panel>
-
-            <Panel header={<span>
-              <i className="fa fa-bar-chart-o fa-fw"></i> Bar Chart Example
-                  <div className="pull-right">
-                      <DropdownButton title="Dropdown" bsSize="xs" pullRight>
-                        <MenuItem eventKey="1">Action</MenuItem>
-                        <MenuItem eventKey="2">Another action</MenuItem>
-                        <MenuItem eventKey="3">Something else here</MenuItem>
-                        <MenuItem divider />
-                        <MenuItem eventKey="4">Separated link</MenuItem>
-                      </DropdownButton>
-                  </div>
-              </span>}
-            >
-              <div>
-                Panel contents
-              </div>
-            </Panel>
-
-            <Panel header={<span>
-              <i className="fa fa-clock-o fa-fw"></i> Responsive Timeline
-              </span>} 
-            >
-              <div>
-                Panel contents
-              </div>
-            </Panel>
-
+              <div className="panel-body">
+                    <div className="table-responsive">
+                        <table className="table table-striped table-bordered table-hover">
+                            <tr>
+                                <th>appointment id</th>
+                                <th>patientId</th>
+                                <th>docId</th>
+                                <th>hospitalId</th>
+                                <th>time</th>
+                                <th>date</th>
+                                <th>delete</th>
+                                <th>update</th>
+                            </tr>
+                            {AppointmentComponents}
+                        </table>
+                    </div>
+                </div>
+            </div>
           </div>
-
-          <div className="col-lg-4">
-
-            <Panel header={<span>
-              <i className="fa fa-bell fa-fw"></i> Notifications Panel
-              </span>} 
-            >
-              <ListGroup>
-                <ListGroupItem href="javascript:void(0)"><i className="fa fa-comment fa-fw"></i> New Comment
-                  <span className="pull-right text-muted small"><em>4 minutes ago</em></span>
-                </ListGroupItem>
-                <ListGroupItem href="javascript:void(0)">
-                  <i className="fa fa-twitter fa-fw"></i> 3 New Followers
-                  <span className="pull-right text-muted small"><em>12 minutes ago</em></span>
-                </ListGroupItem>
-                <ListGroupItem href="javascript:void(0)">
-                  <i className="fa fa-envelope fa-fw"></i> Message Sent
-                  <span className="pull-right text-muted small"><em>27 minutes ago</em></span>
-                </ListGroupItem>
-                <ListGroupItem href="javascript:void(0)">
-                  <i className="fa fa-tasks fa-fw"></i> New Task
-                  <span className="pull-right text-muted small"><em>43 minutes ago</em></span>
-                </ListGroupItem>
-                <ListGroupItem href="javascript:void(0)">
-                  <i className="fa fa-upload fa-fw"></i> Server Rebooted
-                  <span className="pull-right text-muted small"><em>11:32 AM</em></span>
-                </ListGroupItem>
-                <ListGroupItem href="javascript:void(0)">
-                  <i className="fa fa-bolt fa-fw"></i> Server Crashed!
-                  <span className="pull-right text-muted small"><em>11:13 AM</em></span>
-                </ListGroupItem>
-                <ListGroupItem href="javascript:void(0)">
-                  <i className="fa fa-warning fa-fw"></i> Server Not Responding
-                  <span className="pull-right text-muted small"><em>10:57 AM</em></span>
-                </ListGroupItem>
-                <ListGroupItem href="javascript:void(0)">
-                  <i className="fa fa-shopping-cart fa-fw"></i> New Order Placed
-                  <span className="pull-right text-muted small"><em>9:49 AM</em></span>
-                </ListGroupItem>
-                <ListGroupItem href="javascript:void(0)">
-                  <i className="fa fa-money fa-fw"></i> Payment Received
-                  <span className="pull-right text-muted small"><em>Yesterday</em></span>
-                </ListGroupItem>
-              </ListGroup>
-              <Button block>View All Alerts</Button>
-            </Panel>
-
-            <Panel header={<span>
-              <i className="fa fa-bar-chart-o fa-fw"></i> Donut Chart Example
-              </span>}
-            >
-              <div>
-                Panel contents
-              </div>
-            </Panel>
-
-          </div>
-
         </div>
+
       </div>
     );
   }

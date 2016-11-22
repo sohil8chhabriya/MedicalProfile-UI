@@ -23,6 +23,7 @@ import DashboardUserProfile from "../components/pages/dashboard/UserProfile";
 import DashboardAppointments from "../components/pages/dashboard/appointment/Appointments"
 import DashboardPatientAppointment from "../components/pages/dashboard/appointment/PatientAppointment";
 import DashboardAppointmentReport from "../components/pages/dashboard/appointment/AppointmentReport";
+import DashboardAnalytics from "../components/pages/dashboard/Analytics";
 
 var Routes = React.createClass({
 
@@ -36,8 +37,9 @@ var Routes = React.createClass({
 
               <Route name="dashboard.userprofile" path="/userprofile/?:userid?" handler={DashboardUserProfile} />
               <Route name="dashboard.patient-appointment" path="/patient-appointment" handler={DashboardPatientAppointment} />
-              <Route name="dashboard.appointment-report" path="/appointment/report" handler={DashboardAppointmentReport} />
+              <Route name="dashboard.appointment-report" path="/appointment/report/?:id?" handler={DashboardAppointmentReport} />
               <Route name="dashboard.appointments" path="/appointments/" handler={DashboardAppointments} />
+              <Route name="dashboard.analytics" path="/analytics/" handler={DashboardAnalytics} />
               
               <Route name="dashboard.flot-charts" path="/flot-charts" handler={DashboardFlotChartsPage} />
               <Route name="dashboard.morrisjs-charts" path="/morrisjs-charts" handler={DashboardMorrisjsChartsPage} />

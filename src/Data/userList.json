@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "name": "patient name 1",
+    "streetAddress": "patient streetAddress 1",
+    "emailId": "patient@emailid.com",
+    "phoneNo": 1234567890,
+    "city": "Pune",
+    "country": "India",
+    "pincode": "411004",
+    "userType": "Patient"
+  },
+    {
+    "id": 2,
+    "name": "doctor name 2",
+    "streetAddress": "doctor streetAddress 2",
+    "emailId": "doctor@emailid.com",
+    "phoneNo": 1234567890,
+    "city": "Pune",
+    "country": "India",
+    "pincode": "411004",
+    "userType": "Doctor"
+  },
+  {
+    "id": 3,
+    "name": "hospital name 3",
+    "streetAddress": "hospital streetAddress 3",
+    "emailId": "hospital@emailid.com",
+    "phoneNo": 1234567890,
+    "city": "Pune",
+    "country": "India",
+    "pincode": "411004",
+    "userType": "Hospital"
+  }
+]

@@ -47,5 +47,13 @@
     "hospitalId": 6,
     "time": "13:00",
     "date": "07 january 2016"
+  },
+    {
+    "id": 7,
+    "patientId": 1,
+    "docId": 1,
+    "hospitalId": 1,
+    "time": "14:00",
+    "date": "11 january 2016"
   }
 ]

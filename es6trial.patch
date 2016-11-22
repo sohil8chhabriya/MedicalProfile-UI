@@ -1,0 +1,188 @@
+diff --git a/package.json b/package.json
+index ee605ed..690b054 100644
+--- a/package.json
++++ b/package.json
+@@ -29,56 +29,67 @@
+   "author": "Sohil Chhabriya",
+   "license": "MIT",
+   "devDependencies": {
+-    "coveralls": "^2.11.2",
+-    "istanbul": "^0.3.7",
+-    "istanbul-instrumenter-loader": "^0.1.2",
++    "babel": "^6.5.2",
++    "babel-plugin-transform-react-inline-elements": "^6.8.0",
++    "babel-polyfill": "^6.16.0",
++    "babel-preset-es2015": "^6.18.0",
++    "babel-preset-es2016": "^6.16.0",
++    "babel-preset-react": "^6.16.0",
++    "babel-preset-stage-0": "^6.16.0",
++    "chai": "^3.5.0",
++    "coveralls": "^2.11.15",
++    "istanbul": "^0.4.5",
++    "istanbul-instrumenter-loader": "^1.0.0",
+     "json-loader": "^0.5.4",
+-    "karma": "^0.13.9",
+-    "karma-coverage": "^0.2.7",
+-    "karma-mocha": "^0.1.10",
+-    "karma-phantomjs-launcher": "^0.1.4",
+-    "karma-sauce-launcher": "^0.2.10",
+-    "karma-sinon-chai": "^0.3.0",
+-    "karma-webpack": "^1.5.0",
+-    "mocha": "^2.5.3",
+-    "phantomjs": "^1.9.16",
+-    "react-hot-loader": "^1.2.3",
+-    "webpack-dev-server": "^1.7.0"
++    "karma": "^1.3.0",
++    "karma-coverage": "^1.1.1",
++    "karma-mocha": "^1.3.0",
++    "karma-phantomjs-launcher": "^1.0.2",
++    "karma-sauce-launcher": "^1.1.0",
++    "karma-sinon-chai": "^1.2.4",
++    "karma-webpack": "^1.8.0",
++    "mocha": "^3.1.2",
++    "phantomjs": "^2.1.7",
++    "react-hot-loader": "^3.0.0-beta.6",
++    "sinon": "^1.17.6",
++    "sinon-chai": "^2.8.0",
++    "webpack-dev-server": "^1.16.2"
+   },
+   "dependencies": {
+-    "autoprefixer": "^6.0.2",
+-    "axios": "^0.7.0",
+-    "babel-core": "^5.4.7",
+-    "babel-loader": "^5.1.3",
++    "autoprefixer": "^6.5.3",
++    "axios": "^0.15.2",
++    "babel-core": "^6.18.2",
++    "babel-loader": "^6.2.8",
+     "base-64": "^0.1.0",
+-    "bootstrap": "^3.3.5",
+-    "bootstrap-social": "^4.9.1",
++    "bootstrap": "^3.3.7",
++    "bootstrap-social": "^5.0.0",
+     "bundle-loader": "^0.5.4",
+-    "classnames": "^2.2.0",
+-    "css-loader": "^0.18.0",
+-    "express": "^4.12.3",
+-    "extract-text-webpack-plugin": "^0.8.2",
+-    "file-loader": "^0.8.4",
+-    "flux": "^2.1.1",
+-    "font-awesome": "^4.4.0",
+-    "jquery": "^2.1.4",
++    "classnames": "^2.2.5",
++    "css-loader": "^0.26.0",
++    "express": "^4.14.0",
++    "extract-text-webpack-plugin": "^1.0.1",
++    "file-loader": "^0.9.0",
++    "flux": "^3.1.0",
++    "font-awesome": "^4.7.0",
++    "jquery": "^3.1.1",
+     "lazy": "^1.0.11",
+-    "less": "^2.5.3",
+-    "less-loader": "^2.2.1",
++    "less": "^2.7.1",
++    "less-loader": "^2.2.3",
+     "lodash": "^4.17.2",
+-    "node-sass": "^3.4.1",
+-    "normalizr": "^1.1.0",
++    "node-sass": "^3.13.0",
++    "normalizr": "^2.2.1",
+     "nprogress": "^0.2.0",
+-    "postcss-loader": "^0.6.0",
++    "postcss-loader": "^1.1.1",
+     "postcss-nested": "^1.0.0",
+-    "react": "^0.13.3",
+-    "react-bootstrap": "0.25.2",
+-    "react-modal": "^0.5.0",
+-    "react-router": "^0.13.3",
+-    "reflux": "^0.2.12",
+-    "resource-api-utils": "^1.0.0",
+-    "style-loader": "^0.12.3",
+-    "url-loader": "^0.5.6",
+-    "webpack": "^1.12.1"
++    "react": "^15.4.0",
++    "react-bootstrap": "^0.30.6",
++    "react-dom": "^15.4.0",
++    "react-modal": "^1.5.2",
++    "react-router": "^3.0.0",
++    "reflux": "^5.0.1",
++    "resource-api-utils": "^1.0.1",
++    "style-loader": "^0.13.1",
++    "url-loader": "^0.5.7",
++    "webpack": "^1.13.3"
+   }
+ }
+diff --git a/src/app.jsx b/src/app.jsx
+index debf960..e6ae551 100644
+--- a/src/app.jsx
++++ b/src/app.jsx
+@@ -4,7 +4,7 @@
+ 
+ // Polyfill
+ 
+-import "babel-core/polyfill";
++import "babel-polyfill";
+ 
+ // Libraries
+ import React from "react";
+diff --git a/src/components/pages/Login.jsx b/src/components/pages/Login.jsx
+index 4641e1c..ff398e2 100644
+--- a/src/components/pages/Login.jsx
++++ b/src/components/pages/Login.jsx
+@@ -16,7 +16,7 @@ var LoginPage = React.createClass({
+ 
+   render: function(){
+   
+-    return <div className="col-md-4 col-md-offset-4">
++    return (<div className="col-md-4 col-md-offset-4">
+ 
+         <div className="text-center">
+           <h1 className="login-brand-text">Medical Profile</h1>
+@@ -43,7 +43,7 @@ var LoginPage = React.createClass({
+         </Panel>
+         
+       </div>
+-      
++    );  
+ 
+   },
+ 
+diff --git a/webpack.local.config.js b/webpack.local.config.js
+index 58d38b2..623c8a8 100644
+--- a/webpack.local.config.js
++++ b/webpack.local.config.js
+@@ -45,7 +45,8 @@ module.exports = {
+   // Transform source code using Babel and React Hot Loader
+   module: {
+     loaders: [
+-      { test: /\.jsx?$/, exclude: /node_modules/, loaders: ["react-hot", "babel-loader?stage=0"] },
++      { test: /\.js$/, exclude: /node_modules/,  loader: 'babel-loader' },
++      { test: /\.jsx?$/, exclude: /node_modules/, loader: 'babel-loader' },
+       { test: /\.json$/, loader: 'json-loader' },
+       { test: /\.css$/, loader: "style!css" },
+       { test: /\.less$/, loader: 'style!css!less' },
+diff --git a/webpack.production.config.js b/webpack.production.config.js
+index 85b13b8..3b59aec 100644
+--- a/webpack.production.config.js
++++ b/webpack.production.config.js
+@@ -18,7 +18,8 @@ module.exports = {
+ 
+   module: {
+     loaders: [
+-      { test: /\.jsx?$/, exclude: /node_modules/, loaders: ["react-hot", "babel-loader?stage=0"] },
++      { test: /\.js$/, exclude: /node_modules/,  loader: 'babel-loader' },
++      { test: /\.jsx?$/, exclude: /node_modules/, loader: 'babel-loader' },
+       { test: /\.json$/, loader: 'json-loader' },
+       { test: /\.css$/, loader: "style!css" },
+       { test: /\.less$/, loader: 'style!css!less' },
+@@ -28,6 +29,10 @@ module.exports = {
+     ]
+   },
+ 
++  externals: {
++    fs: '{}'
++  },
++
+   node: {
+     console: true,
+     fs: 'empty',

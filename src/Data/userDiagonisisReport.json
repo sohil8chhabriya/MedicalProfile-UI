@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "appointmentId":1,
+    "illness":"fever",
+    "disease":"dengu",
+    "symptoms":"fever, headache",
+    "medication":"xyz",
+    "precaution":"precautions1, precautions2, precautions3",
+    "reVisitDuration":"1 day",
+    "basicCheckupReport": {
+        "bloodPressure": "120 - 150",
+        "bodyTemperature":"98",
+        "pulseRate":"78",
+        "pregnent":"NA",
+        "weight":"75 kg",
+        "height":"176 cm"
+    }
+  },
+  {
+    "id": 2,
+    "appointmentId":2,
+    "illness":"fever",
+    "disease":"dengu",
+    "symptoms":"fever, headache",
+    "medication":"xyz",
+    "precaution":"precautions1, precautions2, precautions3",
+    "reVisitDuration":"1 day",
+    "basicCheckupReport": {
+        "bloodPressure": "120 - 150",
+        "bodyTemperature":"98",
+        "pulseRate":"78",
+        "pregnent":"NA",
+        "weight":"75 kg",
+        "height":"176 cm"
+    }
+  },
+  {
+    "id": 3,
+    "appointmentId":3,
+    "illness":"fever",
+    "disease":"dengu",
+    "symptoms":"fever, headache",
+    "medication":"xyz",
+    "precaution":"precautions1, precautions2, precautions3",
+    "reVisitDuration":"1 day",
+    "basicCheckupReport": {
+        "bloodPressure": "120 - 150",
+        "bodyTemperature":"98",
+        "pulseRate":"78",
+        "pregnent":"NA",
+        "weight":"75 kg",
+        "height":"176 cm"
+    }
+  },
+    {
+    "id": 4,
+    "appointmentId":4,
+    "illness":"fever",
+    "disease":"dengu",
+    "symptoms":"fever, headache",
+    "medication":"xyz",
+    "precaution":"precautions1, precautions2, precautions3",
+    "reVisitDuration":"1 day",
+    "basicCheckupReport": {
+        "bloodPressure": "120 - 150",
+        "bodyTemperature":"98",
+        "pulseRate":"78",
+        "pregnent":"NA",
+        "weight":"75 kg",
+        "height":"176 cm"
+    }
+  },
+    {
+    "id": 5,
+    "appointmentId": 5,
+    "illness":"fever",
+    "disease":"dengu",
+    "symptoms":"fever, headache",
+    "medication":"xyz",
+    "precaution":"precautions1, precautions2, precautions3",
+    "reVisitDuration":"1 day",
+    "basicCheckupReport": {
+        "bloodPressure": "120 - 150",
+        "bodyTemperature":"98",
+        "pulseRate":"78",
+        "pregnent":"NA",
+        "weight":"75 kg",
+        "height":"176 cm"
+    }
+  },
+    {
+    "id": 6,
+    "appointmentId":6,
+    "illness":"fever",
+    "disease":"dengu",
+    "symptoms":"fever, headache",
+    "medication":"xyz",
+    "precaution":"precautions1, precautions2, precautions3",
+    "reVisitDuration":"1 day",
+    "basicCheckupReport": {
+        "bloodPressure": "120 - 150",
+        "bodyTemperature":"98",
+        "pulseRate":"78",
+        "pregnent":"NA",
+        "weight":"75 kg",
+        "height":"176 cm"
+    }
+  }
+]

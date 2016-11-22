@@ -15,13 +15,13 @@ var LoginPage = React.createClass({
   mixins: [Router.Navigation],
 
   render: function(){
-  
-    return <div className="col-md-4 col-md-offset-4">
-
-        <div className="text-center">
-          <h1 className="login-brand-text">Medical Profile</h1>
+    return <div>
+    <div className="col-md-6 col-md-offset-3">
+            <div className="text-center">
+            <h1 className="login-brand-text">Centralize Health Info Analytics</h1>
+          </div>
         </div>
-
+        <div className="col-md-4 col-md-offset-4">
         <Panel header={<h3>Please Sign In</h3>} className="login-panel">
 
           <form role="form" onSubmit={this.handleLogin}>
@@ -42,6 +42,7 @@ var LoginPage = React.createClass({
 
         </Panel>
         
+      </div>
       </div>
       
 
@@ -65,24 +66,41 @@ var LoginPage = React.createClass({
 
   handleLogin: function(e){
     // todo: do validations
-    var url = `http://localhost:8080/MedicalProfileV2/rest/user/auth/${this.state.loginID}/${this.state.password}/`;
-    fetch(url)
-    .then(response => response.json())
-    .then(result=> {
-        var authResult = eval(JSON.parse(result.auth))
-        console.log(`Auth: ${authResult}`);
-        if(authResult){
-            console.log('Auth: Redirecting to dashboard');
-            document.getElementById('error').classList.add('hide');
-            this.transitionTo('dashboard');
-        }
-        else {
-            console.log('Auth: Login Error');
-            document.getElementById('error').classList.remove('hide');
-            this.transitionTo('login');
-        }
-    });
-    return false;
+    if(this.state.loginID === "patient" && this.state.password === "patient") {
+      console.log('Auth: Redirecting to dashboard');
+      document.getElementById('error').classList.add('hide');
+      this.transitionTo('dashboard.userprofile', {userid: 1});
+    }
+    else if(this.state.loginID === "doctor" && this.state.password === "doctor") {
+      console.log('Auth: Redirecting to dashboard');
+      document.getElementById('error').classList.add('hide');
+      this.transitionTo('dashboard.userprofile', {userid: 2});
+    }
+    else if(this.state.loginID === "hospital" && this.state.password === "hospital") {
+      console.log('Auth: Redirecting to dashboard');
+      document.getElementById('error').classList.add('hide');
+      this.transitionTo('dashboard.userprofile', {userid: 3});
+    }
+    else {
+      var url = `http://localhost:8080/MedicalProfileV2/rest/user/auth/${this.state.loginID}/${this.state.password}/`;
+      fetch(url)
+      .then(response => response.json())
+      .then(result=> {
+          var authResult = eval(JSON.parse(result.auth))
+          console.log(`Auth: ${authResult}`);
+          if(authResult){
+              console.log('Auth: Redirecting to dashboard');
+              document.getElementById('error').classList.add('hide');
+              this.transitionTo('dashboard.userprofile', {userid: this.state.loginID});
+          }
+          else {
+              console.log('Auth: Login Error');
+              document.getElementById('error').classList.remove('hide');
+              this.transitionTo('login');
+          }
+      });
+      return false;
+    }
   },
 
 });

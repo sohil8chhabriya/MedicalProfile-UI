@@ -9,6 +9,7 @@ build/*.svg
 # Logs
 logs
 *.log
+npm-debug*
 
 # Coverage directory used by tools like istanbul
 coverage

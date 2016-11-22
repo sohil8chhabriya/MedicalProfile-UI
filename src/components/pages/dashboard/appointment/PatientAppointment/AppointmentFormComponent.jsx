@@ -20,58 +20,43 @@ export default class AppointmentFormComponent extends Component {
                 <div className="col-lg-6 col-md-offset-3">
                     <form id="appoitment-detail-form">
                         <Input type="select" label="Select Speciality" multiple>
-                          <option value="1">1</option>
-                          <option value="1">2</option>
-                          <option value="1">3</option>
-                          <option value="1">4</option>
-                          <option value="1">5</option>
+                          <option value="1">speciality 1</option>
+                          <option value="2">speciality 2</option>
+                          <option value="3">speciality 3</option>
+                          <option value="4">speciality 4</option>
+                          <option value="5">speciality 5</option>
                         </Input>
                         <Input type="select" label="Select Hospital" multiple>
-                          <option value="1">1</option>
-                          <option value="1">2</option>
-                          <option value="1">3</option>
-                          <option value="1">4</option>
-                          <option value="1">5</option>
+                          <option value="1">Hospital 1</option>
+                          <option value="2">Hospital 2</option>
+                          <option value="3">Hospital 3</option>
+                          <option value="4">Hospital 4</option>
+                          <option value="5">Hospital 5</option>
                         </Input>
                       <h5><strong>When?</strong></h5>
                       <Row>
                         <Col xs={3}>
-                            <Input type="select" label="Day">
-                              <option value="1">1</option>
-                              <option value="1">2</option>
-                              <option value="1">3</option>
-                              <option value="1">4</option>
-                              <option value="1">5</option>
+                            <Input type="text" label="Day" placeholder="dd">
                             </Input>
                         </Col>
                         <Col xs={3}>
-                            <Input type="select" label="Month">
-                              <option value="1">1</option>
-                              <option value="1">2</option>
-                              <option value="1">3</option>
-                              <option value="1">4</option>
-                              <option value="1">5</option>
+                            <Input type="text" label="Month" placeholder="mm">
                             </Input>
                         </Col>
                         <Col xs={3}>
-                            <Input type="select" label="Year">
-                              <option value="1">1</option>
-                              <option value="1">2</option>
-                              <option value="1">3</option>
-                              <option value="1">4</option>
-                              <option value="1">5</option>
+                            <Input type="text" label="Year" placeholder="yyyy">
                             </Input>
                         </Col>
                         <Col xs={3}>
                             <Input type="text" label="Time" placeholder="hh:mm"></Input>
                         </Col>
+                        <Col xs={4}>
+                        <Button type="submit">Register Appointment</Button>
+                        </Col>
+                        <Col xs={3}>
+                        <Button type="reset">Reset</Button>
+                        </Col>
                       </Row>
-                    <Col xs={3}>
-                    <Button type="submit">Submit Button</Button>
-                    </Col>
-                    <Col xs={3}>
-                    <Button type="reset">Reset Button</Button>
-                    </Col>
                   </form>
                 </div>
               </div>

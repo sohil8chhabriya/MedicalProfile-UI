@@ -1,10 +1,10 @@
 import React, { PropTypes, Component } from 'react';
 import {Panel, Button, Input, Label, FormControls, Row, Col, PageHeader} from 'react-bootstrap';
-import { deleteAppointment } from '../../../../../Action/AppointmentAction';
-import AppointmentStore from '../../../../../Store/AppointmentStore';
-import AppointmentListItem from './AppointmentListItem'
+import { deleteAppointment } from '../../../../Action/AppointmentAction';
+import AppointmentStore from '../../../../Store/AppointmentStore';
+import AppointmentListItem from '../appointment/Appointments/AppointmentListItem'
 
-var Appointments = React.createClass({
+var Analytics = React.createClass({
   /*constructor() {
     super();
     this.getAppointmentList = this.getAppointmentList.bind(this);
@@ -49,12 +49,37 @@ var Appointments = React.createClass({
       <div>
         <div className="col-lg-12">
             <div className="page-header">
-                <h1>Manage Appointments</h1>
+                <h1>Info Analytics</h1>
             </div>
 
+			<div className="panel panel-default">
+                <div className="panel-heading">
+                    <span className="panel-title">Analytics Control Panel</span>
+                </div>
+                <div className="panel-body">
+                    <div className="row">
+	                    <h4>Total No of patients of certain Disease in certain Region</h4>
+	                    <span className="col-lg-4">Disease: <input type="text" value="" placeholder="Disease" /></span>
+	                    <span className="col-lg-4">Region: <input type="text" value="" placeholder="Region" /></span>
+	                    <span className="col-lg-4"><button type="button" value="Search" name="dtr">Search</button></span>
+                    </div>
+                    <div className="row">
+	                    <h4>Total No of patients of certain Disease in certain Region</h4>
+	                    <span className="col-lg-4">Disease: <input type="text" value="" placeholder="Disease" /></span>
+	                    <span className="col-lg-4">Region: <input type="text" value="" placeholder="Region" /></span>
+	                    <span className="col-lg-4"><button type="button" value="Search" name="dtr">Search</button></span>
+                    </div>
+                    <div className="row">
+	                    <h4>Total No of patients of certain Disease in certain Region</h4>
+	                    <span className="col-lg-4">Disease: <input type="text" value="" placeholder="Disease" /></span>
+	                    <span className="col-lg-4">Region: <input type="text" value="" placeholder="Region" /></span>
+	                    <span className="col-lg-4"><button type="button" value="Search" name="dtr">Search</button></span>
+                    </div>
+                </div>
+            </div>
             <div className="panel panel-default">
                 <div className="panel-heading">
-                    <span className="panel-title">Appointments List</span>
+                    <span className="panel-title">Analytics Result Panel</span>
                 </div>
                 <div className="panel-body">
                     <div className="table-responsive">
@@ -80,4 +105,4 @@ var Appointments = React.createClass({
   }
 });
 
-export default Appointments;
+export default Analytics;
