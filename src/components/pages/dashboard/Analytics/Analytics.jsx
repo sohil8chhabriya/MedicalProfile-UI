@@ -61,19 +61,19 @@ var Analytics = React.createClass({
 	                    <h4>Total No of patients of certain Disease in certain Region</h4>
 	                    <span className="col-lg-4">Disease: <input type="text" value="" placeholder="Disease" /></span>
 	                    <span className="col-lg-4">Region: <input type="text" value="" placeholder="Region" /></span>
-	                    <span className="col-lg-4"><button type="button" value="Search" name="dtr">Search</button></span>
+	                    <span className="col-lg-4"><button onClick="" type="button" value="Search" name="dtr">Search</button></span>
                     </div>
                     <div className="row">
-	                    <h4>Total No of patients of certain Disease in certain Region</h4>
+	                    <h4>Total No of patients are admitted for certain Disease in certain Region</h4>
 	                    <span className="col-lg-4">Disease: <input type="text" value="" placeholder="Disease" /></span>
 	                    <span className="col-lg-4">Region: <input type="text" value="" placeholder="Region" /></span>
-	                    <span className="col-lg-4"><button type="button" value="Search" name="dtr">Search</button></span>
+	                    <span className="col-lg-4"><button onClick="" type="button" value="Search" name="adtr">Search</button></span>
                     </div>
                     <div className="row">
-	                    <h4>Total No of patients of certain Disease in certain Region</h4>
+	                    <h4>Total No of patients died of certain Disease in certain Region</h4>
 	                    <span className="col-lg-4">Disease: <input type="text" value="" placeholder="Disease" /></span>
 	                    <span className="col-lg-4">Region: <input type="text" value="" placeholder="Region" /></span>
-	                    <span className="col-lg-4"><button type="button" value="Search" name="dtr">Search</button></span>
+	                    <span className="col-lg-4"><button onClick="" type="button" value="Search" name="ddtr">Search</button></span>
                     </div>
                 </div>
             </div>
