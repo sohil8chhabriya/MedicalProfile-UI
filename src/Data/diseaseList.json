@@ -1,26 +1,26 @@
 [
   {
     "id": 1,
-    "DiseaseName": "disease1"
+    "DiseaseName": "Dangue"
   },
   {
     "id": 2,
-    "DiseaseName": "disease2"
+    "DiseaseName": "Malaria"
   },
   {
     "id": 3,
-    "DiseaseName": "disease3"
+    "DiseaseName": "Typhoid"
   },
   {
     "id": 4,
-    "DiseaseName": "disease4"
+    "DiseaseName": "flue"
   },
   {
     "id": 5,
-    "DiseaseName": "disease5"
+    "DiseaseName": "cancer"
   },
   {
     "id": 6,
-    "DiseaseName": "disease6"
+    "DiseaseName": "ulcer"
   },
 ]

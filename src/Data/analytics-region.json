@@ -1,18 +1,18 @@
 [
   {
-    "region": "region1",
+    "region": "pune",
 	"total": 10,
     "totaladmitted": 7,
     "totaldied": 3
   },
   {
-    "region": "region2",
+    "region": "mumbai",
     "total": 10,
     "totaladmitted": 7,
     "totaldied": 3
   },
 	{
-    "region": "region3",
+    "region": "nagpur",
     "total": 14,
     "totaladmitted": 6,
     "totaldied": 3

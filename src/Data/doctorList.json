@@ -2,26 +2,26 @@
   {
     "docId": 10,
 	"userId":10,
-    "speciality": "speciality 1"
+    "speciality": "Heart Surgeon"
   },
 	{
     "docId": 2,
 	"userId":2,
-    "speciality": "speciality 2"
+    "speciality": "Brain Specialist"
   },
   	{
     "docId": 30,
 	"userId":3,
-    "speciality": "speciality 3"
+    "speciality": "Kidney Specialist"
   },
 	{
     "docId": 40,
 	"userId":40,
-    "speciality": "speciality 4"
+    "speciality": "Gyanic"
   },
   	{
     "docId": 50,
 	"userId":50,
-    "speciality": "speciality 5"
+    "speciality": "Cancer Specialist"
   }
 ]
